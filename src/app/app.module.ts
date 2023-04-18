@@ -6,10 +6,11 @@ import { AppComponent } from "./app.component"
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { FormsModule } from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component'
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { QuestionnaryComponent } from './questionnary/questionnary.component'
 
 @NgModule({
-    declarations: [AppComponent, HeaderComponent, LandingPageComponent],
+    declarations: [AppComponent, HeaderComponent, LandingPageComponent, QuestionnaryComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
