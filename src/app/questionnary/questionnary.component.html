@@ -4,13 +4,13 @@
         *ngFor="let question of questionnary"
         [questionSet]="question"
     ></app-question-set>
-    <button
+    <button class="classic-button quiz--button"
         *ngIf="!areAnswersValidated && currentQuestionnary$"
         (click)="onValidateAnswers()"
     >
         Validate
     </button>
-    <button *ngIf="areAnswersValidated" (click)="onContinue()">Continue</button>
+    <button class="classic-button quiz--button" *ngIf="areAnswersValidated" (click)="onContinue()">Continue</button>
 </div>
 <div class="loading-screen flex--column flex--align fade-in-bottom">
     <mat-spinner *ngIf="!currentQuestionnary$"></mat-spinner>

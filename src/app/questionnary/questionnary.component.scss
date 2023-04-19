@@ -18,7 +18,13 @@
         font-size: 1.1rem;
         font-weight: 700;
         color: rgb(54, 54, 54);
-        margin-bottom: 1em;
+        margin-bottom: 2em;
+    }
+
+    .quiz--button {
+        border-radius: 0;
+        background-color: #2E933C;
+        padding: 1em;
     }
 
 }
