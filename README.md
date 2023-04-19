@@ -31,3 +31,8 @@ QuizMaster is a dynamic and interactive quiz application built using Angular and
 ### Real-time Updates
 
 -   Powered by Firebase Realtime Database, ensuring that the quiz content is always up-to-date.
+
+## To-do
+
+- Add login 
+- Add profile

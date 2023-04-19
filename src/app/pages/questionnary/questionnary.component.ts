@@ -29,7 +29,6 @@ export class QuestionnaryComponent implements OnInit {
         if (this.areAllAnswersSelected()) {
             this.displayResults()
             this.calculatePoints()
-            console.log("Points : ", this.answerPoints)
             this.areAnswersValidated = true
             window.scrollTo(0, 0)
         }

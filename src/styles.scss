@@ -22,6 +22,7 @@ a {
 
 // MODIFIER CLASSES
 
+.flex--between,
 .flex--column,
 .flex--center,
 .flex--align,
@@ -39,6 +40,10 @@ a {
 
 .flex--column {
     flex-direction: column;
+}
+
+.flex--between {
+    justify-content: space-between;
 }
 
 .basic--shadow {

@@ -1,6 +1,7 @@
 <div *ngIf="currentQuestionnary$ | async as questionnary" class="questionnary">
-    <div class="questionnary__header basic--shadow">
-        {{ questionnary[0].category }}
+    <div class="questionnary__header basic--shadow flex--between ">
+       <span>{{ questionnary[0].category }}</span> 
+       <span>Points : {{ answerPoints }} </span>
     </div>
     <app-question-set
         *ngFor="let question of questionnary"
