@@ -18,7 +18,7 @@
         <div
             *ngFor="let theme of themes"
             [id]="theme.id"
-            class="landing-page__themes__card flex--column flex--align basic--shadow"
+            class="landing-page__themes__card basic--shadow"
             (click)="onSelectTheme($event)"
         >
             <h4>{{ theme.name | uppercase }}</h4>

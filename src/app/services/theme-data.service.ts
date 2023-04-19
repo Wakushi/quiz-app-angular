@@ -7,49 +7,49 @@ import { Theme } from "../models/Theme"
 export class ThemeDataService {
     quizThemes: Theme[] = [
         {
-            name: "General",
+            name: "General Knowledge",
             id: 9,
-            logo: "../../assets/themes/general.png",
+            logo: "../../assets/themes/knowledge.png",
         },
         {
             name: "Science & Nature",
             id: 17,
-            logo: "../../assets/themes/chemistry.png",
+            logo: "../../assets/themes/science.avif",
         },
         {
             name: "Sports",
             id: 21,
-            logo: "../../assets/themes/sports.png",
+            logo: "../../assets/themes/sports.avif",
         },
         {
             name: "History",
             id: 23,
-            logo: "../../assets/themes/history.png",
+            logo: "../../assets/themes/history.jpg",
         },
         {
             name: "Art",
             id: 25,
-            logo: "../../assets/themes/palette.png",
+            logo: "../../assets/themes/art.jpg",
         },
         {
             name: "Animals",
             id: 27,
-            logo: "../../assets/themes/animals.png",
+            logo: "../../assets/themes/animals.jpg",
         },
         {
             name: "Films",
             id: 11,
-            logo: "../../assets/themes/camera.png",
+            logo: "../../assets/themes/films.jpg",
         },
         {
             name: "Music",
             id: 12,
-            logo: "../../assets/themes/music.png",
+            logo: "../../assets/themes/music.jpg",
         },
         {
             name: "Video Games",
             id: 15,
-            logo: "../../assets/themes/game.png",
+            logo: "../../assets/themes/games.jpg",
         },
     ]
 }
