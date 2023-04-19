@@ -1,0 +1,15 @@
+.questionnary {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 5em;
+
+    button {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0.2em;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+}

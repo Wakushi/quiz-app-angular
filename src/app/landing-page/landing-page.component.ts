@@ -1,6 +1,8 @@
 import { Component } from "@angular/core"
 import { ThemeDataService } from "../services/theme-data.service"
 import { Theme } from "../models/Theme"
+import { QuestionsService } from "../services/questions.service"
+import { Router } from "@angular/router"
 
 @Component({
     selector: "app-landing-page",
@@ -8,16 +10,18 @@ import { Theme } from "../models/Theme"
     styleUrls: ["./landing-page.component.scss"],
 })
 export class LandingPageComponent {
-    constructor(private themeDataService: ThemeDataService) {}
+    constructor(
+        private themeDataService: ThemeDataService,
+        private questionsService: QuestionsService,
+        private router:Router
+    ) {}
 
     themes: Theme[] = this.themeDataService.quizThemes
-    selectedTheme!: number
 
     onSelectTheme(event: any): void {
-        this.selectedTheme = event.target.id
+        this.questionsService.onSelectTheme(event.target.id)
+        this.questionsService.getQuestionsData()
+        this.router.navigateByUrl('question')
     }
 
-    checkData():void {
-      console.log(this.selectedTheme)
-    }
 }

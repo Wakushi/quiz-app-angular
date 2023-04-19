@@ -1,0 +1,13 @@
+<div>
+    <h2>{{ questionSet.question }}</h2>
+    <mat-button-toggle-group class="flex">
+        <mat-button-toggle
+            #answerEl
+            [id]="answerObj.id"
+            (click)="onSelectAnswer(answerObj.id)"
+            *ngFor="let answerObj of questionSet.answers"
+        >
+            {{ answerObj.answer }}</mat-button-toggle
+        >
+    </mat-button-toggle-group>
+</div>

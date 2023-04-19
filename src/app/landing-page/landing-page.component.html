@@ -1,24 +1,10 @@
 <section class="landing-page flex--align flex--column">
     <div class="landing-page__intro">
-        <h2 (click)="checkData()">Quiz Master</h2>
+        <h2>Quiz Master</h2>
         <p>
             Welcome to QuizMaster, the ultimate destination for trivia
             enthusiasts! 🎉🧠 Are you ready to put your knowledge to the test
             and have some fun? You've come to the right place!
-        </p>
-        <p>
-            QuizMaster offers a wide range of categories and difficulty levels
-            to challenge users of all interests and expertise. From history
-            buffs to science whizzes, there's something for everyone.
-        </p>
-        <p>
-            Our interactive and dynamic quizzes provide real-time feedback,
-            keeping you engaged while learning something new.
-        </p>
-        <p>
-            Track your progress, view your quiz history, and see how you stack
-            up against friends and other quiz enthusiasts on our global and
-            category-specific leaderboards.
         </p>
         <p>
             It's time to unlock your true potential and become the ultimate
@@ -26,6 +12,7 @@
             begin! 🏆💡
         </p>
     </div>
+    <h3>Quiz Categories</h3>
     <div class="landing-page__themes flex">
         <div
             *ngFor="let theme of themes"
@@ -33,7 +20,7 @@
             class="landing-page__themes__card flex--column flex--align"
             (click)="onSelectTheme($event)"
         >
-            <h3>{{ theme.name | uppercase }}</h3>
+            <h4>{{ theme.name | uppercase }}</h4>
             <img [src]="theme.logo" />
         </div>
     </div>
