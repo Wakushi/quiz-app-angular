@@ -61,6 +61,7 @@ export class QuestionsService {
                                 () => 0.5 - Math.random()
                             )
                             questionnary.push({
+                                category:questionItem.category,
                                 question: this.decodeHtmlEntities(
                                     questionItem.question
                                 ),

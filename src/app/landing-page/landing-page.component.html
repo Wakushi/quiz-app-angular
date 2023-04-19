@@ -1,23 +1,24 @@
 <section class="landing-page flex--align flex--column">
-    <div class="landing-page__intro">
-        <h2>Quiz Master</h2>
+    <div class="landing-page__intro flex--column">
+        <h2>Welcome to Quiz Master ! </h2>
         <p>
             Welcome to QuizMaster, the ultimate destination for trivia
-            enthusiasts! 🎉🧠 Are you ready to put your knowledge to the test
-            and have some fun? You've come to the right place!
+            enthusiasts! 🧠 Are you ready to put your knowledge to the test and
+            have some fun? You've come to the right place!
         </p>
         <p>
             It's time to unlock your true potential and become the ultimate
             QuizMaster! Sign up now or log in to get started. Let the quizzing
-            begin! 🏆💡
+            begin! 🏆
         </p>
     </div>
-    <h3>Quiz Categories</h3>
+    <button class="join-button classic-button">Join now !</button>
+    <h3>Explore our categories</h3>
     <div class="landing-page__themes flex">
         <div
             *ngFor="let theme of themes"
             [id]="theme.id"
-            class="landing-page__themes__card flex--column flex--align"
+            class="landing-page__themes__card flex--column flex--align basic--shadow"
             (click)="onSelectTheme($event)"
         >
             <h4>{{ theme.name | uppercase }}</h4>

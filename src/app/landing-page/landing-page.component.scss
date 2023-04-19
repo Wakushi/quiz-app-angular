@@ -1,9 +1,32 @@
 .landing-page {
-    padding: 5em;
+    padding: 4em 2em;
 
     .landing-page__intro {
         max-width: 700px;
         text-align: center;
+        gap: 1em;
+        margin-bottom: 2em;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+  
+    h3 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .join-button {
+        margin-bottom: 7em;
     }
 
     .landing-page__themes {
@@ -11,12 +34,11 @@
         gap: 1em;
 
         .landing-page__themes__card {
-            background-color: rgb(248, 152, 42);
+            background-color: #20A4F3;
             padding: 1em;
             border-radius: 1em;
             flex-grow: 1;
             flex-basis: 150px;
-            box-shadow: 2px 2px 8px #111;
 
             h4 {
                 font-weight: 600;
@@ -24,7 +46,8 @@
                 text-shadow: 1px 1px 4px #111;
             }
 
-            h4, img {
+            h4,
+            img {
                 pointer-events: none;
             }
         }

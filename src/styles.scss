@@ -6,7 +6,7 @@ body {
 * {
     margin: 0;
     padding: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 *,
@@ -36,6 +36,12 @@ body {
     flex-direction: column;
 }
 
+.basic--shadow {
+    box-shadow: 1px 1px 5px #11111185;
+}
+
+// ANSWER MODIFIER CLASSES
+
 .good {
     background-color: green;
 }
@@ -52,26 +58,45 @@ body {
     pointer-events: none;
 }
 
+// BUTTONS
+
+.classic-button {
+    font-weight: 700;
+    background-color: #006d77;
+    color: aliceblue;
+    border: transparent;
+    border-radius: 1em;
+    padding: 0.5em 1.5em;
+    font-size: 1.2rem;
+    box-shadow: 1px 1px 4px #111;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: aliceblue;
+        color: #006d77;
+    }
+}
 
 // KEYFRAMES
 
-  @keyframes fade-in-bottom {
+@keyframes fade-in-bottom {
     0% {
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
     }
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
+}
 
 // ANIMATED CLASSES
 
 .fade-in-bottom {
-	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+    animation: fade-in-bottom 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }

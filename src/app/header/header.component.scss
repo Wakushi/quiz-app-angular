@@ -1,14 +1,19 @@
 header {
 
     padding: 1em;
-    box-shadow: 1px 1px 8px #111;
+    background-color: #006D77;
+    color: aliceblue;
+    gap: 1em;
 
     h1 {
         margin: 0;
+        font-size: 1.6rem;
+        font-family: 'DynaPuff', cursive;
     }
 
-    .fa-earth-americas {
-        font-size: 1.2rem;
+    img {
+        filter: invert(1);
+        width: 40px;
     }
 
 }
