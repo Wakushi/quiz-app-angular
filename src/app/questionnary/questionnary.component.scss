@@ -2,6 +2,7 @@
     position: relative;
     min-height: 100vh;
     padding-bottom: 5em;
+    overflow-y: hidden;
 
     button {
         position: absolute;
@@ -21,10 +22,36 @@
         margin-bottom: 2em;
     }
 
+    .continue--button ,
     .quiz--button {
         border-radius: 0;
         background-color: #2E933C;
         padding: 1em;
+
+        &:hover,
+        &:focus {
+            color: #2E933C;
+            background-color: aliceblue;
+        }
+    }
+
+    .continue--button {
+        background-color: #006D77;
+        &:hover,
+        &:focus {
+            color: #006D77;
+        }
+    }
+
+    .disabled--button {
+        cursor: not-allowed;
+        background-color: red;
+
+        &:hover,
+        &:focus {
+            color: red;
+            background-color: aliceblue;
+        }
     }
 
 }

@@ -1,17 +1,26 @@
 <div *ngIf="currentQuestionnary$ | async as questionnary" class="questionnary">
-    <div class="questionnary__header basic--shadow">{{ questionnary[0].category }}</div>
+    <div class="questionnary__header basic--shadow">
+        {{ questionnary[0].category }}
+    </div>
     <app-question-set
         *ngFor="let question of questionnary"
         [questionSet]="question"
+        (onAnswerSelected)="onAnswerSelect()"
     ></app-question-set>
-    <button class="classic-button quiz--button"
+    <button
+    class="basic--button quiz--button"
+        [ngClass]="{ 'disabled--button' : !areAllQuestionsAnswered }"
         *ngIf="!areAnswersValidated && currentQuestionnary$"
         (click)="onValidateAnswers()"
     >
         Validate
     </button>
-    <button class="classic-button quiz--button" *ngIf="areAnswersValidated" (click)="onContinue()">Continue</button>
+    <button
+        class="basic--button continue--button"
+        *ngIf="areAnswersValidated"
+        (click)="onContinue()"
+    >
+        Continue
+    </button>
 </div>
-<div class="loading-screen flex--column flex--align fade-in-bottom">
-    <mat-spinner *ngIf="!currentQuestionnary$"></mat-spinner>
-</div>
+

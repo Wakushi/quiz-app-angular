@@ -18,6 +18,7 @@ export class QuestionnaryComponent implements OnInit {
     currentQuestionnary$!: Observable<QuestionSet[]>
     answerPoints: number = 0
     areAnswersValidated: boolean = false
+    areAllQuestionsAnswered: boolean = false
 
     ngOnInit(): void {
         window.scrollTo(0, 0)
@@ -31,9 +32,7 @@ export class QuestionnaryComponent implements OnInit {
             console.log("Points : ", this.answerPoints)
             this.areAnswersValidated = true
             window.scrollTo(0, 0)
-        } else {
-            console.log("Answer all questions !")
-        }
+        } 
     }
 
     displayResults(): void {
@@ -64,5 +63,11 @@ export class QuestionnaryComponent implements OnInit {
             })
         }
         return areAllSelected
+    }
+
+    onAnswerSelect(): void {
+        if (this.areAllAnswersSelected()) {
+            this.areAllQuestionsAnswered = true
+        }
     }
 }

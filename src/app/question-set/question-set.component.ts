@@ -5,6 +5,8 @@ import {
     QueryList,
     ViewChildren,
     Renderer2,
+    Output,
+    EventEmitter,
 } from "@angular/core"
 import { QuestionSet } from "../models/QuestionSet"
 
@@ -15,6 +17,7 @@ import { QuestionSet } from "../models/QuestionSet"
 })
 export class QuestionSetComponent {
     @Input() questionSet!: QuestionSet
+    @Output() onAnswerSelected = new EventEmitter<boolean>()
     @ViewChildren("answerEl", { read: ElementRef })
     answerElements!: QueryList<ElementRef>
     constructor(private renderer: Renderer2) {}
@@ -24,6 +27,7 @@ export class QuestionSetComponent {
 
     onSelectAnswer(answerId: string): void {
         this.selectedAnswerId = answerId
+        this.onAnswerSelected.emit(true)
     }
 
     applyResultStyles(): void {
