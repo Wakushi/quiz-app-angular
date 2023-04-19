@@ -1,27 +1,33 @@
-# QuizApp
+# QuizMaster - Angular & Firebase Quiz App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+QuizMaster is a dynamic and interactive quiz application built using Angular and Firebase. This app is designed for quiz enthusiasts who love to challenge themselves with trivia and improve their knowledge on various topics. Our app offers a wide range of categories and difficulty levels to cater to users with different interests and expertise.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### User Authentication
 
-## Code scaffolding
+-   Secure sign up and sign in with email and password or social media accounts (Google, Facebook, and Twitter).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Quiz Categories
 
-## Build
+-   Multiple quiz categories to choose from, such as General Knowledge, History, Science, and many more.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Difficulty Levels
 
-## Running unit tests
+-   Easy, Medium, and Hard difficulty levels to cater to users of all skill levels.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Interactive UI
 
-## Running end-to-end tests
+-   A responsive and intuitive user interface that provides real-time feedback and animations.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Progress Tracking
 
-## Further help
+-   Track your progress, view your quiz history, and compare your performance with friends.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Leaderboards
+
+-   Compete with other users on global and category-specific leaderboards.
+
+### Real-time Updates
+
+-   Powered by Firebase Realtime Database, ensuring that the quiz content is always up-to-date.
