@@ -8,7 +8,7 @@ import {
     Output,
     EventEmitter,
 } from "@angular/core"
-import { QuestionSet } from "../models/QuestionSet"
+import { QuestionSet } from "../../models/QuestionSet"
 
 @Component({
     selector: "app-question-set",

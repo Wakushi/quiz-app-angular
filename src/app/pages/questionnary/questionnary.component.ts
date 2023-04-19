@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChildren, QueryList } from "@angular/core"
-import { QuestionsService } from "../services/questions.service"
+import { QuestionsService } from "../../services/questions.service"
 import { Observable } from "rxjs"
-import { QuestionSet } from "../models/QuestionSet"
-import { QuestionSetComponent } from "../question-set/question-set.component"
+import { QuestionSet } from "../../models/QuestionSet"
+import { QuestionSetComponent } from "../../components/question-set/question-set.component"
 
 @Component({
     selector: "app-questionnary",
@@ -32,7 +32,7 @@ export class QuestionnaryComponent implements OnInit {
             console.log("Points : ", this.answerPoints)
             this.areAnswersValidated = true
             window.scrollTo(0, 0)
-        } 
+        }
     }
 
     displayResults(): void {

@@ -1,16 +1,14 @@
 .questionnary {
     position: relative;
     min-height: 100vh;
-    padding-bottom: 5em;
     overflow-y: hidden;
 
     button {
-        position: absolute;
-        bottom: 0;
         width: 100%;
         padding: 0.2em;
         font-weight: 600;
         font-size: 1.2rem;
+        margin-top: 2em;
     }
 
     .questionnary__header {
@@ -22,24 +20,24 @@
         margin-bottom: 2em;
     }
 
-    .continue--button ,
+    .continue--button,
     .quiz--button {
         border-radius: 0;
-        background-color: #2E933C;
+        background-color: #2e933c;
         padding: 1em;
 
         &:hover,
         &:focus {
-            color: #2E933C;
+            color: #2e933c;
             background-color: aliceblue;
         }
     }
 
     .continue--button {
-        background-color: #006D77;
+        background-color: #006d77;
         &:hover,
         &:focus {
-            color: #006D77;
+            color: #006d77;
         }
     }
 
@@ -53,5 +51,4 @@
             background-color: aliceblue;
         }
     }
-
 }

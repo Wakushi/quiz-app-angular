@@ -1,7 +1,7 @@
 import { Component } from "@angular/core"
-import { ThemeDataService } from "../services/theme-data.service"
-import { Theme } from "../models/Theme"
-import { QuestionsService } from "../services/questions.service"
+import { ThemeDataService } from "../../services/theme-data.service"
+import { Theme } from "../../models/Theme"
+import { QuestionsService } from "../../services/questions.service"
 import { Router } from "@angular/router"
 
 @Component({
@@ -13,7 +13,7 @@ export class LandingPageComponent {
     constructor(
         private themeDataService: ThemeDataService,
         private questionsService: QuestionsService,
-        private router:Router
+        private router: Router
     ) {}
 
     themes: Theme[] = this.themeDataService.quizThemes
@@ -21,7 +21,6 @@ export class LandingPageComponent {
     onSelectTheme(event: any): void {
         this.questionsService.onSelectTheme(event.target.id)
         this.questionsService.getQuestionsData()
-        this.router.navigateByUrl('question')
+        this.router.navigateByUrl("question")
     }
-
 }

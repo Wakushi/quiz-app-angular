@@ -8,10 +8,10 @@ import { HttpClientModule } from "@angular/common/http"
 
 // COMPONENTS
 import { AppComponent } from "./app.component"
-import { HeaderComponent } from "./header/header.component"
-import { LandingPageComponent } from "./landing-page/landing-page.component"
-import { QuestionnaryComponent } from "./questionnary/questionnary.component"
-import { QuestionSetComponent } from "./question-set/question-set.component"
+import { HeaderComponent } from "./components/header/header.component"
+import { LandingPageComponent } from "./pages/landing-page/landing-page.component"
+import { QuestionnaryComponent } from "./pages/questionnary/questionnary.component"
+import { QuestionSetComponent } from "./components/question-set/question-set.component"
 
 // MATERIAL
 import { MatButtonToggleModule } from "@angular/material/button-toggle"

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core"
-import { QuestionsService } from "../services/questions.service";
-import { Router } from "@angular/router";
+import { QuestionsService } from "../../services/questions.service"
+import { Router } from "@angular/router"
 
 @Component({
     selector: "app-header",
@@ -8,6 +8,5 @@ import { Router } from "@angular/router";
     styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
-    constructor(private router:Router) {}
-
+    constructor(private router: Router) {}
 }
