@@ -50,6 +50,7 @@ export class QuestionnaryComponent implements OnInit {
         this.questionsService.getQuestionsData()
         this.currentQuestionnary$ = this.questionsService.currentQuestionnary$
         this.areAnswersValidated = !this.areAnswersValidated
+        this.areAllQuestionsAnswered = !this.areAllQuestionsAnswered
     }
 
     areAllAnswersSelected(): boolean {

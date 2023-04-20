@@ -1,14 +1,18 @@
 header {
-
     padding: 1em;
-    background-color: #006D77;
+    background-color: #006d77;
     color: aliceblue;
     gap: 1em;
+    justify-content: space-between;
+
+    .header__logo {
+        gap: 1em;
+    }
 
     h1 {
         margin: 0;
         font-size: 1.6rem;
-        font-family: 'DynaPuff', cursive;
+        font-family: "DynaPuff", cursive;
     }
 
     img {
@@ -16,4 +20,29 @@ header {
         width: 40px;
     }
 
+    .log--button {
+        background-color: #161032;
+
+        &:hover,
+        &:focus {
+            color: #161032;
+            background-color: aliceblue;
+        }
+    }
+
+    .header__user-section {
+        gap: 1em;
+        .header__user-profile {
+            width: 50px;
+            border: 2px #161032 solid;
+            border-radius: 0.5em;
+            background-color: rgb(194, 194, 194);
+
+            img {
+                height: 100%;
+                width: 100%;
+                transform: scale(0.5);
+            }
+        }
+    }
 }
