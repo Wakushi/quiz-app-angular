@@ -16,6 +16,12 @@ import { QuestionSetComponent } from "./components/question-set/question-set.com
 // MATERIAL
 import { MatButtonToggleModule } from "@angular/material/button-toggle"
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner"
+import { LoginComponent } from "./login/login.component"
+
+// FIREBASE
+import { initializeApp, provideFirebaseApp } from "@angular/fire/app"
+import { provideAuth, getAuth } from "@angular/fire/auth"
+import { provideDatabase, getDatabase } from "@angular/fire/database"
 
 @NgModule({
     declarations: [
@@ -24,6 +30,7 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner"
         LandingPageComponent,
         QuestionnaryComponent,
         QuestionSetComponent,
+        LoginComponent,
     ],
     imports: [
         BrowserModule,
@@ -33,6 +40,9 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner"
         HttpClientModule,
         MatButtonToggleModule,
         MatProgressSpinnerModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth()),
+        provideDatabase(() => getDatabase()),
     ],
     providers: [],
     bootstrap: [AppComponent],
