@@ -28,55 +28,5 @@
         margin-bottom: 7em;
     }
 
-    .landing-page__themes {
-        flex-wrap: wrap;
-        gap: 1em;
-
-        .landing-page__themes__card {
-            background-color: #20a4f3;
-            border-radius: 1em;
-            flex-grow: 1;
-            flex-basis: 150px;
-            position: relative;
-            overflow: hidden;
-            min-height: 150px;
-            cursor: pointer;
-
-            &:hover,
-            &:focus {
-                transform: scale(1.01);
-                box-shadow: 1px 1px 6px #111;
-            }
-
-            &:hover img,
-            &:focus img {
-                transform: scale(1.2);
-            }
-
-            h4 {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-weight: 600;
-                color: aliceblue;
-                text-shadow: 1px 1px 4px #111;
-                text-align: center;
-                font-size: 1.4rem;
-                z-index: 2;
-            }
-
-            h4,
-            img {
-                pointer-events: none;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                transition: 1s;
-            }
-        }
-    }
+   
 }

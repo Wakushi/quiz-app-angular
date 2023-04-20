@@ -1,0 +1,11 @@
+<div class="landing-page__themes flex">
+    <div
+        *ngFor="let theme of themes"
+        [id]="theme.id"
+        class="landing-page__themes__card basic--shadow"
+        (click)="onSelectTheme($event)"
+    >
+        <h4>{{ theme.name | uppercase }}</h4>
+        <img [src]="theme.logo" />
+    </div>
+</div>

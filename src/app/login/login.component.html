@@ -51,7 +51,11 @@
                     }}</mat-icon>
                 </button>
             </mat-form-field>
-            <button class="basic--button" type="submit">
+            <button
+                (click)="onLogButtonClick()"
+                class="basic--button"
+                type="submit"
+            >
                 {{ isUserSigning ? "Sign Up" : "Log In" }}
             </button>
             <button class="basic--button">Sign In with Google</button>
