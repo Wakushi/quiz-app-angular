@@ -25,7 +25,7 @@ import { MatIconModule } from "@angular/material/icon"
 import { initializeApp, provideFirebaseApp } from "@angular/fire/app"
 import { provideAuth, getAuth } from "@angular/fire/auth"
 import { provideDatabase, getDatabase } from "@angular/fire/database"
-import { environment } from "../environments/environment"
+import { environment } from "../environments/environment.prod"
 import { CategoriesComponent } from "./pages/categories/categories.component";
 import { ProfileComponent } from './pages/profile/profile.component'
 
