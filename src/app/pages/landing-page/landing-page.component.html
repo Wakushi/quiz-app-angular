@@ -12,15 +12,16 @@
             begin! 🏆
         </p>
     </div>
-    <button class="join-button basic--button" (click)="toggleLoginModal()">
+    <button *ngIf="!isUserLogged" class="join-button basic--button fade-in-bottom" (click)="toggleLoginModal()">
         Join now !
     </button>
     <h3>Explore our categories</h3>
-    <div class="landing-page__themes flex">
+    <div class="categories flex fade-in-bottom">
         <div
             *ngFor="let theme of themes"
             [id]="theme.id"
-            class="landing-page__themes__card basic--shadow"
+            class="categories__card basic--shadow"
+            (click)="onSelectTheme($event)"
         >
             <h4>{{ theme.name | uppercase }}</h4>
             <img [src]="theme.logo" />
