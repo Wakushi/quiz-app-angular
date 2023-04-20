@@ -1,0 +1,22 @@
+<div class="profile__container flex--column flex--align">
+    <div class="profile__basics flex--column flex--align basic--shadow">
+        <div class="profile__basics__picture">
+            <img src="../../../assets/user.png" alt="User's profile picture" />
+        </div>
+        <div class="profile__basics__name flex--align">
+            <h3
+                [ngStyle]="{ display: isEditingName ? 'none' : 'block' }"
+                *ngIf="currentUsername$ | async as user"
+            >
+                {{ user.displayName }}
+            </h3>
+            <input *ngIf="isEditingName" [(ngModel)]="newUserName" />
+            <i
+                (click)="toggleNameEditing()"
+                class="fa-solid fa-pen-to-square"
+            ></i>
+        </div>
+    </div>
+
+    <!-- <button (click)="checkData()">Debug</button> -->
+</div>

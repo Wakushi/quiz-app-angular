@@ -1,0 +1,33 @@
+.profile__container {
+    background-color: rgb(198, 245, 229);
+    padding: 1em;
+    justify-content: center;
+
+    .profile__basics {
+        padding: 2em;
+        background-color: rgb(255, 255, 255);
+        width: 50%;
+        border-radius: 1em;
+
+        .profile__basics__picture {
+            width: 150px;
+            border: 2px solid black;
+
+            img {
+                width: 100%;
+            }
+        }
+        .profile__basics__name {
+            width: 150px;
+            justify-content: center;
+            position: relative;
+            .fa-pen-to-square {
+                position: absolute;
+                right: 0;
+            }
+            h3 {
+                margin: 0 1em;
+            }
+        }
+    }
+}
