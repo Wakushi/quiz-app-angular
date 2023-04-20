@@ -1,0 +1,14 @@
+<div class="category__page fade-in-bottom">
+    <h2>Choose your category</h2>
+    <div class="categories flex">
+        <div
+            *ngFor="let theme of themes"
+            [id]="theme.id"
+            class="categories__card basic--shadow"
+            (click)="onSelectTheme($event)"
+        >
+            <h4>{{ theme.name | uppercase }}</h4>
+            <img [src]="theme.logo" />
+        </div>
+    </div>
+</div>
