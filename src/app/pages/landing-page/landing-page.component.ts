@@ -17,10 +17,15 @@ export class LandingPageComponent {
     ) {}
 
     themes: Theme[] = this.themeDataService.quizThemes
+    isLoginModalDisplayed: boolean = false
 
     onSelectTheme(event: any): void {
         this.questionsService.onSelectTheme(event.target.id)
         this.questionsService.getQuestionsData()
         this.router.navigateByUrl("question")
+    }
+
+    toggleLoginModal(): void {
+        this.isLoginModalDisplayed = !this.isLoginModalDisplayed
     }
 }

@@ -1,6 +1,6 @@
 <section class="landing-page flex--align flex--column">
     <div class="landing-page__intro flex--column">
-        <h2>Welcome to Quiz Master ! </h2>
+        <h2>Welcome to Quiz Master !</h2>
         <p>
             Welcome to QuizMaster, the ultimate destination for trivia
             enthusiasts! 🧠 Are you ready to put your knowledge to the test and
@@ -12,7 +12,9 @@
             begin! 🏆
         </p>
     </div>
-    <button class="join-button basic--button">Join now !</button>
+    <button class="join-button basic--button" (click)="toggleLoginModal()">
+        Join now !
+    </button>
     <h3>Explore our categories</h3>
     <div class="landing-page__themes flex">
         <div
@@ -26,3 +28,4 @@
         </div>
     </div>
 </section>
+<app-login *ngIf="isLoginModalDisplayed" (modalClosed)="toggleLoginModal()"></app-login>

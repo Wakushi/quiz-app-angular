@@ -1,1 +1,60 @@
-<p>login works!</p>
+<div class="modal--container">
+    <div class="login-form flex--column flex--align fade-in-bottom">
+        <div class="login-form__top flex--align">
+            <div
+                id="login"
+                [ngClass]="{ 'login--active': !isUserSigning }"
+                (click)="onLogSignOption($event)"
+                class="login-form__top__button"
+            >
+                Log In
+            </div>
+            <div
+                id="signup"
+                [ngClass]="{ 'login--active': isUserSigning }"
+                (click)="onLogSignOption($event)"
+                class="login-form__top__button"
+            >
+                Sign Up
+            </div>
+            <i class="fa-solid fa-xmark" (click)="onCloseModal()"></i>
+        </div>
+        <form class="flex--column" [formGroup]="loginForm">
+            <label for="email">Email</label>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your email</mat-label>
+                <input
+                    id="email"
+                    matInput
+                    placeholder="pat@example.com"
+                    formControlName="email"
+                    required
+                />
+            </mat-form-field>
+            <label for="password">Password</label>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input
+                    matInput
+                    formControlName="password"
+                    [type]="hide ? 'password' : 'text'"
+                />
+                <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                >
+                    <mat-icon>{{
+                        hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button class="basic--button" type="submit">
+                {{ isUserSigning ? "Sign Up" : "Log In" }}
+            </button>
+            <button class="basic--button">Sign In with Google</button>
+        </form>
+    </div>
+</div>
