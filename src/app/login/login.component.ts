@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
             // Sign Up
             this.loginService.signUp(userEmail, userPassword)
         } else {
-            console.log("I log !")
+           this.loginService.logIn(userEmail, userPassword)
         }
     }
 }

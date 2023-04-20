@@ -1,4 +1,15 @@
 <header class="flex--align basic--shadow">
-    <a href=""><img src="../../assets/quiz-logo.png" alt="Quiz Master's logo"/></a>
-    <a href=""><h1>Quiz Master</h1></a>
+    <div class="header__logo flex--align">
+        <a href=""
+            ><img src="../../assets/quiz-logo.png" alt="Quiz Master's logo"
+        /></a>
+        <a href=""><h1>Quiz Master</h1></a>
+    </div>
+    <button *ngIf="isUserLogged" (click)="onLogOut()" class="basic--button log--button">
+        Log Out
+    </button>
 </header>
+<app-login
+    *ngIf="isLoginModalDisplayed"
+    (modalClosed)="toggleLoginModal()"
+></app-login>
