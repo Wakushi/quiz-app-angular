@@ -1,8 +1,6 @@
 <div class="profile__container flex--column flex--align">
     <div class="profile__basics flex--column flex--align basic--shadow">
-        <div class="profile__basics__picture">
-            <img src="../../../assets/user.png" alt="User's profile picture" />
-        </div>
+        <app-profile-picture-frame size="medium"></app-profile-picture-frame>
         <div class="profile__basics__name flex--align">
             <h3
                 [ngStyle]="{ display: isEditingName ? 'none' : 'block' }"

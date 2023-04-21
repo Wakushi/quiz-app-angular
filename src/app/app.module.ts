@@ -25,9 +25,10 @@ import { MatIconModule } from "@angular/material/icon"
 import { initializeApp, provideFirebaseApp } from "@angular/fire/app"
 import { provideAuth, getAuth } from "@angular/fire/auth"
 import { provideDatabase, getDatabase } from "@angular/fire/database"
-import { environment } from "../environments/environment.prod"
+import { environment } from "../environments/environment"
 import { CategoriesComponent } from "./pages/categories/categories.component";
-import { ProfileComponent } from './pages/profile/profile.component'
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfilePictureFrameComponent } from './components/profile-picture-frame/profile-picture-frame.component'
 
 @NgModule({
     declarations: [
@@ -39,6 +40,7 @@ import { ProfileComponent } from './pages/profile/profile.component'
         LoginComponent,
         CategoriesComponent,
         ProfileComponent,
+        ProfilePictureFrameComponent,
     ],
     imports: [
         BrowserModule,

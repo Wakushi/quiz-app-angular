@@ -1,0 +1,20 @@
+.profile-picture-frame {
+    border: 2px #161032 solid;
+    border-radius: 0.5em;
+    background-color: rgb(194, 194, 194);
+    cursor: pointer;
+
+    img {
+        height: 100%;
+        width: 100%;
+        transform: scale(0.5);
+    }
+}
+
+.small {
+    width: 50px;
+}
+
+.medium {
+    width: 250px;
+}

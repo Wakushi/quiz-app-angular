@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     constructor(
         private router: Router,
         private loginService: LoginService,
-        private auth: Auth,
         private userService: UserService
     ) {}
     private unsubscribeAuth!: Unsubscribe

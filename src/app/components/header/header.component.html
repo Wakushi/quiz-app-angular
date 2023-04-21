@@ -6,13 +6,10 @@
         <a href=""><h1>Quiz Master</h1></a>
     </div>
     <div *ngIf="isUserLogged" class="header__user-section flex--align">
-        <span *ngIf="currentUsername$ | async as user">Hi, {{ user.displayName }} !</span>
-        <div
-            (click)="onClickProfile()"
-            class="header__user-profile basic--shadow"
+        <span *ngIf="currentUsername$ | async as user"
+            >Hi, {{ user.displayName }} !</span
         >
-            <img src="../../../assets/user.png" alt="User's profile picture" />
-        </div>
+        <app-profile-picture-frame size="small"></app-profile-picture-frame>
         <button (click)="onLogOut()" class="basic--button log--button">
             Log Out
         </button>

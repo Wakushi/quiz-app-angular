@@ -9,24 +9,23 @@
         width: 50%;
         border-radius: 1em;
 
-        .profile__basics__picture {
-            width: 150px;
-            border: 2px solid black;
-
-            img {
-                width: 100%;
-            }
-        }
         .profile__basics__name {
             width: 150px;
             justify-content: center;
             position: relative;
+
             .fa-pen-to-square {
                 position: absolute;
                 right: 0;
+                cursor: pointer;
             }
+
             h3 {
                 margin: 0 1em;
+            }
+
+            input {
+                width: 150px;
             }
         }
     }
